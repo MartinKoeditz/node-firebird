@@ -158,7 +158,7 @@ Before or alongside the TypeScript work, refactor the prototype-based codebase t
 | :--- | :--- | :--- |
 | 2.5 | 10, 11, 12, 13 | ✅ Implemented |
 | 3.0 | 14, 15 | ✅ Implemented |
-| 4.0 | 16, 17 | ✅ Protocol 16 Implemented / 🚧 Protocol 17 Missing |
+| 4.0 | 16, 17 | ✅ Implemented |
 | 5.0 | 18 | ❌ Not Implemented |
 | 6.0 | N/A | ❌ Not Implemented |
 
@@ -175,11 +175,11 @@ Before or alongside the TypeScript work, refactor the prototype-based codebase t
 
 ### Firebird 4 Support
 
-- **Protocol Versions 16 and 17:** ✅ Protocol 16 Implemented / 🚧 Protocol 17 Missing.
+- **Protocol Versions 16 and 17:** ✅ Implemented.
 - **Statement Timeout:** ✅ Implemented (Protocol 16+).
 - **`INT128` Data Type:** ✅ Implemented.
 - **Time Zone Support:** ✅ Implemented — `TIME WITH TIME ZONE`, `TIMESTAMP WITH TIME ZONE`, `sessionTimeZone` option (Protocol 16+).
-- **`DECFLOAT` Data Type:** ❌ TODO — `DECFLOAT(16)` and `DECFLOAT(34)`.
+- **`DECFLOAT` Data Type:** ✅ Implemented — `DECFLOAT(16)` and `DECFLOAT(34)` with full IEEE 754-2008 BID (Binary Integer Decimal) encoding/decoding.
 
 ### Firebird 5 Support
 
@@ -205,7 +205,7 @@ Before or alongside the TypeScript work, refactor the prototype-based codebase t
 These are open pull requests that are close to being merged and represent near-term deliverables.
 
 - **[PR #385](https://github.com/hgourvest/node-firebird/pull/385)** — Use native `BigInt` instead of the `big-integer` library
-- **[PR #383](https://github.com/hgourvest/node-firebird/pull/383)** — `DECFLOAT` data type support
+- **[PR #383](https://github.com/hgourvest/node-firebird/pull/383)** — `DECFLOAT` data type support ✅ Merged
 
 ---
 
@@ -214,8 +214,8 @@ These are open pull requests that are close to being merged and represent near-t
 | Target | Items |
 | :--- | :--- |
 | Next patch | P0 bug fixes: #387, #357, #343, #341 |
-| Next minor | Express.js docs + helpers; TS Phase A typings; in-flight PRs #385, #383 |
-| Future minor | TS Phase B (promise wrappers); P1 + P2 issues; Protocol 17 / Firebird 5 |
+| Next minor | Express.js docs + helpers; TS Phase A typings; in-flight PR #385; Protocol 17 + DECFLOAT shipped in #383 |
+| Future minor | TS Phase B (promise wrappers); P1 + P2 issues; Protocol 18 / Firebird 5 |
 | Future major | ESM/CJS rework; TS Phase C generics; full class-based refactor (only if breaking) |
 
 ---
